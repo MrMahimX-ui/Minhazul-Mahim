@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minhazul Mahim | Cyber Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(-45deg,#020617,#0f172a,#1e3a8a,#7c3aed);
+background-size:400% 400%;
+animation:bg 15s ease infinite;
+color:#fff;
+overflow-x:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+background:rgba(0,0,0,.3);
+backdrop-filter:blur(12px);
+z-index:999;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.profile{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #38bdf8;
+box-shadow:0 0 35px #38bdf8;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-12px);
+}
+}
+
+.hero h1{
+font-size:3.5rem;
+margin-top:20px;
+}
+
+.typing{
+font-size:1.4rem;
+color:#7dd3fc;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 35px;
+border-radius:40px;
+background:linear-gradient(90deg,#06b6d4,#8b5cf6);
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:90px 10%;
+}
+
+.title{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:40px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,255,255,.15);
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.skill{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+text-align:center;
+cursor:pointer;
+transition:.4s;
+}
+
+.skill:hover{
+transform:translateY(-10px);
+background:rgba(139,92,246,.4);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.stat{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat h3{
+font-size:2rem;
+color:#38bdf8;
+}
+
+.progress{
+margin-top:20px;
+}
+
+.bar{
+background:#1e293b;
+height:25px;
+border-radius:30px;
+overflow:hidden;
+margin-bottom:20px;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#06b6d4,#8b5cf6);
+text-align:center;
+line-height:25px;
+font-size:13px;
+font-weight:bold;
+}
+
+footer{
+background:#020617;
+padding:30px;
+text-align:center;
+}
+
+.social a{
+display:block;
+margin:10px 0;
+color:white;
+text-decoration:none;
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.85);
+justify-content:center;
+align-items:center;
+padding:20px;
+z-index:9999;
+}
+
+.modal-box{
+background:#0f172a;
+max-width:700px;
+width:100%;
+padding:30px;
+border-radius:20px;
+border:2px solid #38bdf8;
+max-height:85vh;
+overflow:auto;
+}
+
+.close{
+float:right;
+font-size:30px;
+cursor:pointer;
+}
+
+#skillTitle{
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+#skillText{
+line-height:1.8;
+}
+
+#skillText h3{
+color:#7dd3fc;
+margin-top:15px;
+}
+
+#skillText ul{
+padding-left:20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Mahim</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<img src="Photo.jpg" class="profile">
+
+<h1>Minhazul Mahim</h1>
+
+<p class="typing" id="typing"></p>
+
+<a href="#about" class="btn">Explore Portfolio</a>
+</section>
+
+<section id="about">
+<h2 class="title">About Me</h2>
+
+<div class="card">
+Hello! I'm Minhazul Mahim, a Class 9 student at Icon Dreams School and College.
+I am passionate about Cyber Security, Technology and Gaming.
+I enjoy learning new digital skills and exploring the modern world of technology.
+My dream is to build a successful future in Cyber Security and Technology.
+</div>
+</section>
+
+<section>
+<h2 class="title">My Journey</h2>
+
+<div class="stats">
+<div class="stat">
+<h3>9</h3>
+<p>Class</p>
+</div>
+
+<div class="stat">
+<h3>4+</h3>
+<p>Skills</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Passion</p>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<h2 class="title">My Skills</h2>
+
+<div class="skills">
+
+<div class="skill" onclick="showSkill('cyber')">
+🛡️ Cyber Security
+</div>
+
+<div class="skill" onclick="showSkill('gaming')">
+🎮 Gaming
+</div>
+
+<div class="skill" onclick="showSkill('tech')">
+💻 Technology
+</div>
+
+<div class="skill" onclick="showSkill('problem')">
+🧠 Problem Solving
+</div>
+
+</div>
+
+<div class="progress">
+
+<p>Cyber Security</p>
+<div class="bar">
+<div class="fill" style="width:90%">90%</div>
+</div>
+
+<p>Gaming</p>
+<div class="bar">
+<div class="fill" style="width:95%">95%</div>
+</div>
+
+<p>Technology</p>
+<div class="bar">
+<div class="fill" style="width:85%">85%</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="title">Achievements</h2>
+
+<div class="skills">
+<div class="skill">🏆 Technology Enthusiast</div>
+<div class="skill">🛡️ Cyber Security Learner</div>
+<div class="skill">🎮 Passionate Gamer</div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="title">Contact</h2>
+
+<div class="card social">
+<a href="https://www.facebook.com/share/14ekHQoLFAu/" target="_blank">
+Facebook Profile
+</a>
+
+<a href="https://mrmahimx-ui.github.io/Minhazul-Mahim-portfolio/" target="_blank">
+GitHub Portfolio
+</a>
+</div>
+</section>
+
+<footer>
+© 2026 Minhazul Mahim | Cyber Portfolio
+</footer>
+
+<div class="modal" id="modal">
+<div class="modal-box">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<h2 id="skillTitle"></h2>
+<div id="skillText"></div>
+
+</div>
+</div>
+
+<script>
+
+const words=[
+"Cyber Security Enthusiast",
+"Technology Explorer",
+"Gamer",
+"Class 9 Student"
+];
+
+let i=0;
+let j=0;
+let current="";
+let typing=document.getElementById("typing");
+
+function type(){
+if(j<words[i].length){
+current+=words[i][j];
+typing.innerHTML=current;
+j++;
+setTimeout(type,100);
+}else{
+setTimeout(()=>{
+current="";
+j=0;
+i=(i+1)%words.length;
+type();
+},1500);
+}
+}
+type();
+
+function showSkill(skill){
+
+let title="";
+let text="";
+
+if(skill==="cyber"){
+title="🛡️ Cyber Security";
+text=`
+<h3>About</h3>
+<p>I enjoy learning cybersecurity concepts, digital privacy and online safety.</p>
+
+<h3>Interests</h3>
+<ul>
+<li>Network Security</li>
+<li>Digital Safety</li>
+<li>Cyber Awareness</li>
+<li>Ethical Hacking Concepts</li>
+</ul>
+
+<h3>Goal</h3>
+<p>To become a cybersecurity professional in the future.</p>
+`;
+}
+
+if(skill==="gaming"){
+title="🎮 Gaming";
+text=`
+<h3>About</h3>
+<p>Gaming helps me improve strategy, teamwork and quick thinking.</p>
+
+<h3>Skills</h3>
+<ul>
+<li>Fast Decision Making</li>
+<li>Competitive Mindset</li>
+<li>Strategic Thinking</li>
+</ul>
+`;
+}
+
+if(skill==="tech"){
+title="💻 Technology";
+text=`
+<h3>Favorite Topics</h3>
+<ul>
+<li>Web Development</li>
+<li>Artificial Intelligence</li>
+<li>Computers</li>
+<li>Digital Innovation</li>
+</ul>
+`;
+}
+
+if(skill==="problem"){
+title="🧠 Problem Solving";
+text=`
+<h3>Strengths</h3>
+<ul>
+<li>Logical Thinking</li>
+<li>Creative Solutions</li>
+<li>Critical Analysis</li>
+</ul>
+`;
+}
+
+document.getElementById("skillTitle").innerHTML=title;
+document.getElementById("skillText").innerHTML=text;
+document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
